@@ -19,8 +19,7 @@ class App extends Component {
   render() {
     return(
     <div className="App">
-      <CardList whateverThisIs="Huhu">
-      We are props children
+      <CardList monsters={ this.state.monsters }>
       </CardList>
     </div>
     )
