@@ -12,7 +12,7 @@ class App extends Component {
       searchField : ''
     };
 
-    this.handleChange = this.handleChange.bind(this);
+
   }
   componentDidMount() {
     fetch('https://jsonplaceholder.typicode.com/users')
@@ -20,7 +20,7 @@ class App extends Component {
     .then(users => this.setState({ monsters : users }))
     .catch(error => console.log("I goofed up the api"));
   }
-  handleChange(e){
+  handleChange = (e) => {
     this.setState(
       { searchField : e.target.value }
     )
